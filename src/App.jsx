@@ -1477,15 +1477,15 @@ function OurStory({ onNext }) {
   const moments = [
     {
       icon: MessageCircle,
-      text: "December 2023",
+      text: "January 8",
       detail:
-        "We started talking on Instagram, and somehow one conversation turned into us.",
+        "The first day we met. The start of everything that slowly became my favorite story.",
     },
     {
       icon: Heart,
-      text: "January 8",
+      text: "January 13",
       detail:
-        "That is the day we became ours. The day 'you and me' turned into something real.",
+        "The day we came into a relationship. The day 'you and me' turned into us.",
     },
     {
       icon: Coffee,
