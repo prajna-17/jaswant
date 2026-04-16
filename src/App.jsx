@@ -929,6 +929,18 @@ function MuscleSlider({ onNext }) {
 }
 
 function RainWalk({ playing, setPlaying, onNext }) {
+  const rainVideoRef = useRef(null);
+
+  useEffect(() => {
+    if (playing && rainVideoRef.current) {
+      rainVideoRef.current.play().catch(() => {});
+    }
+  }, [playing]);
+
+  const handlePlay = () => {
+    setPlaying(true);
+  };
+
   return (
     <SlideWrap>
       <p
@@ -945,23 +957,43 @@ function RainWalk({ playing, setPlaying, onNext }) {
         that rainy evening walk
       </Heading>
       <PhotoFrame style={{ width: "100%", position: "relative" }}>
-        {!playing ? (
-          <div
-            style={{ position: "relative", cursor: "pointer" }}
-            onClick={() => setPlaying(true)}
+        <div
+          style={{
+            width: "100%",
+            aspectRatio: "16/9",
+            background: "var(--deep)",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            borderRadius: 2,
+            position: "relative",
+            overflow: "hidden",
+          }}
+        >
+          <video
+            ref={rainVideoRef}
+            controls={playing}
+            playsInline
+            preload="auto"
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
+            onClick={() => {
+              if (!playing) handlePlay();
+            }}
           >
-            <PlaceholderMedia
-              label="/rainwalk.mp4"
-              icon={CloudRain}
-              aspect="16/9"
-            />
+            <source src="/rainwalk.mp4" type="video/mp4" />
+          </video>
+          {!playing && (
             <div
+              onClick={handlePlay}
               style={{
                 position: "absolute",
                 inset: 0,
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
+                cursor: "pointer",
+                background:
+                  "linear-gradient(to top, rgba(61,47,37,0.24), rgba(61,47,37,0.06))",
               }}
             >
               <div
@@ -984,30 +1016,8 @@ function RainWalk({ playing, setPlaying, onNext }) {
                 />
               </div>
             </div>
-          </div>
-        ) : (
-          <div
-            style={{
-              width: "100%",
-              aspectRatio: "16/9",
-              background: "var(--deep)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              borderRadius: 2,
-            }}
-          >
-            <video
-              autoPlay
-              controls
-              playsInline
-              preload="metadata"
-              style={{ width: "100%", height: "100%", objectFit: "contain" }}
-            >
-              <source src="/rainwalk.mp4" type="video/mp4" />
-            </video>
-          </div>
-        )}
+          )}
+        </div>
       </PhotoFrame>
       <Label>
         The rain didn't ruin anything.
@@ -1230,30 +1240,40 @@ function VideoCallGallery({ onNext }) {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "1fr",
+          gridTemplateColumns: "repeat(auto-fit, minmax(145px, 1fr))",
           gap: 14,
           width: "100%",
         }}
       >
         {frames.map((_, i) => (
-          <div
-            key={i}
-            style={{
-              width: "100%",
-            }}
-          >
-            <img
-              src={`/vc${i + 1}.jpeg`}
-              alt={`Video call ${i + 1}`}
+          <PhotoFrame key={i} style={{ width: "100%", padding: 6 }}>
+            <div
               style={{
                 width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                display: "block",
+                aspectRatio: "9 / 16",
+                background: "var(--warm)",
                 borderRadius: 2,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                overflow: "hidden",
               }}
-            />
-          </div>
+            >
+              <img
+                src={`/vc${i + 1}.jpeg`}
+                alt={`Video call ${i + 1}`}
+                style={{
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  width: "auto",
+                  height: "auto",
+                  objectFit: "contain",
+                  display: "block",
+                  borderRadius: 2,
+                }}
+              />
+            </div>
+          </PhotoFrame>
         ))}
       </div>
       <Divider />
