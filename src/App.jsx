@@ -682,7 +682,7 @@ function SkinnyGrid({ onNext }) {
         the pre-muscle-man chapter{" "}
       </p>
       <Heading style={{ fontSize: "clamp(24px, 6vw, 40px)" }}>
-        before yoy became
+        before you became
         <br />
         <em>muscle man jaswant.</em>
       </Heading>
