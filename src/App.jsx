@@ -581,7 +581,7 @@ function ChildhoodGrid({ onNext }) {
         <em>this cute lil baby boy was born.</em>
       </Heading>
       <Label style={{ maxWidth: 340 }}>
-        And honestly, the world became a little softer that day.
+        And honestly, the world became a little better that day.
         <br />
         These are some of my favorite tiny Jaswant memories,
         <br />
@@ -682,15 +682,15 @@ function SkinnyGrid({ onNext }) {
         the pre-muscle-man chapter{" "}
       </p>
       <Heading style={{ fontSize: "clamp(24px, 6vw, 40px)" }}>
-        before he became
+        before yoy became
         <br />
         <em>muscle man jaswant.</em>
       </Heading>
       <Label style={{ maxWidth: 340 }}>
-        Here is the era where he was very skinny, very cute, and somehow still
+        Here is the era where you was very skinny, very cute, and somehow still
         carrying full hero energy.
         <br />
-        Honestly, even before the transformation, he was already a whole
+        Honestly, even before the transformation, you was already a whole
         heart-stealer.
       </Label>
       <div
@@ -755,27 +755,27 @@ function MuscleSlider({ onNext }) {
     {
       src: "/muscle6.jpeg",
       alt: "Current Jaswant photo 1",
-      title: "those muscles!",
+      title: "",
     },
     {
       src: "/muscle5.jpeg",
       alt: "Current Jaswant photo 2",
-      title: "charm",
+      title: "",
     },
     {
       src: "/muscle3.jpeg",
       alt: "Current Jaswant photo 3",
-      title: "strenght",
+      title: "",
     },
     {
       src: "/muscle4.jpeg",
       alt: "Current Jaswant photo 4",
-      title: "the arms",
+      title: "",
     },
     {
       src: "/muscle1.jpeg",
       alt: "Current Jaswant photo 5",
-      title: "the whole you",
+      title: "",
     },
     {
       src: "/muscle2.jpeg",
@@ -814,7 +814,7 @@ function MuscleSlider({ onNext }) {
       <Heading style={{ fontSize: "clamp(24px, 6vw, 40px)" }}>
         and then,
         <br />
-        <em>he became art.</em>
+        <em>bhooooom!!.</em>
       </Heading>
       <Label style={{ maxWidth: 340 }}>
         Somewhere along the way, the soft little boy turned into this quietly
@@ -1310,7 +1310,7 @@ function GoofingAround({ playing, setPlaying, onNext }) {
       </Heading>
       <PhotoFrame style={{ width: "100%" }}>
         <video
-          src="/goofing2.mp4"
+          src="/hello.mp4"
           controls
           playsInline
           preload="metadata"
@@ -1896,18 +1896,18 @@ function Letter({ onNext }) {
           Dear Jaswant,
           <br />
           <br />
-          You came into my life and suddenly everything got a little lighter.
-          The kind of light that stays even when it's raining. Even when it's
-          hard. Even when we're annoying each other.
+          You came into my life and suddenly everything got so much better. The
+          kind of light that you bought into my life. The light that stays, Even
+          when it's hard, Even when we're annoying each other.
           <br />
           <br />
-          I hope this birthday feels like the biggest, warmest hug — because
+          I hope this birthday feels like the biggest, warmest hug....because
           that's what you deserve. Every single day.
           <br />
           <br />
           Thank you for being exactly who you are.
           <br />
-          I like you so much it's a little embarrassing.
+          I Love you so much it's a little embarrassing.
           <br />
           <br />
           <span
